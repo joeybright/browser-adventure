@@ -1,0 +1,27 @@
+{
+  "name": "browser-adventure",
+  "version": "1.0.0",
+  "description": "A text adventure in your browser",
+  "main": "entry.jsx",
+  "scripts": {
+    "webpack": "webpack --progress --colors",
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeybright/browser-adventure.git"
+  },
+  "author": "Joey Bright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeybright/browser-adventure/issues"
+  },
+  "homepage": "https://github.com/joeybright/browser-adventure#readme",
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "react": "^0.13.3",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
