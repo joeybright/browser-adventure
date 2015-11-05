@@ -1,10 +1,16 @@
 
 // Adventure.jsx
+var AdventureData = require('./data/adventures/mainAdventure.jsx')
+var AdventureLog = require('./data/adventureLog.jsx')
+
 var Adventure = ({
 
-  update: function(string) {
-    var newString = string + "111111";
-    return {data: newString};
+  getLog: function() {
+    return AdventureLog;
+  },
+  updateLog: function(string) {
+    AdventureLog.log.push({text: string});
+    return AdventureLog;
   }
 
 });

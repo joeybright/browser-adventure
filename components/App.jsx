@@ -7,9 +7,12 @@ var Adventure = require('../Adventure.jsx')
 
 var App = React.createClass({
   // Initial state is empty
+  getInitialState: function() {
+    return Adventure.getLog();
+  },
   handleChange: function(string) {
     // Gets the new state by updating the adventure
-    var newState = Adventure.update(string);
+    var newState = Adventure.updateLog(string);
     // The adventures state is set based on the object returned from updating the Adventure
     this.setState(newState);
   },
