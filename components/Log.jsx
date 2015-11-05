@@ -8,7 +8,6 @@ var Log = React.createClass({
   render: function () {
     // Currently just displays all of the data passed to it
     var logNodes = this.props.data.log.map(function (data) {
-      console.log(data);
       return (
         <LogItem logText={data.text} />
       );
