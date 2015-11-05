@@ -8,11 +8,16 @@ var Input = React.createClass({
     onAdd: React.PropTypes.func.isRequired,
   },
   handleChange: function(event) {
-    // On change, run the onAdd function in props (accessed by App.jsx)
+    // On enter button pressed
     var ENTER = 13;
-    if( event.keyCode == ENTER ) {
+    // Run the onAdd function in props (accessed by App.jsx)
+    if(event.keyCode == ENTER) {
+      // Get the string in the input
       var string = event.target.value;
+      // Bubble up the string using the onAdd event
       this.props.onAdd(string);
+      // Reset the value in the input field
+      return event.target.value = "";
     }
   },
   render: function () {
