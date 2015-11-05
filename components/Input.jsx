@@ -9,15 +9,16 @@ var Input = React.createClass({
   },
   handleChange: function(event) {
     // On change, run the onAdd function in props (accessed by App.jsx)
-    var string = event.target.value;
-    this.props.onAdd(string);
+    var ENTER = 13;
+    if( event.keyCode == ENTER ) {
+      var string = event.target.value;
+      this.props.onAdd(string);
+    }
   },
   render: function () {
     return (
-      <div>
-        <input type="text" ref="playerInput" className="input" onChange={this.handleChange}>
-        </input>
-      </div>
+      <input type="text" ref="playerInput" className="input" onKeyDown={this.handleChange}>
+      </input>
     )
   }
 });
