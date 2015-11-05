@@ -10,7 +10,7 @@ var App = React.createClass({
   getInitialState: function() {
     return Adventure.getLog();
   },
-  handleChange: function(string) {
+  updateAdventure: function(string) {
     // Gets the new state by updating the adventure
     var newState = Adventure.updateLog(string);
     // The adventures state is set based on the object returned from updating the Adventure
@@ -20,7 +20,7 @@ var App = React.createClass({
     return (
       <div className="adventure">
         <Log data={this.state} />
-        <Input onAdd={this.handleChange} />
+        <Input onAdd={this.updateAdventure} />
       </div>
     )
   }
