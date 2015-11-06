@@ -17,11 +17,11 @@ var App = React.createClass({
     // Gets the new state by updating the adventure
     var newState = Adventure.updateLog(string);
     // The adventures state is set based on the object returned from updating the Adventure
-    this.setState(newState);
+    return this.setState(newState);
   },
   focusInput: function(event) {
     // Focus the input on click of the app
-    this.setState({focus: true})
+    return this.setState({focus: true});
   },
   render: function () {
     return (

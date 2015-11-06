@@ -34,11 +34,8 @@ var Input = React.createClass({
   },
   render: function () {
     return (
-      <div>
-        <div className='carrot'></div>
-        <input autofocus type="text" ref="playerInput" className="adventure-input" onKeyDown={this.handleChange}>
-        </input>
-      </div>
+      <input autofocus type="text" ref="playerInput" className="adventure-input" onKeyDown={this.handleChange}>
+      </input>
     )
   }
 });
