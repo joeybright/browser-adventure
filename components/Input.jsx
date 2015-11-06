@@ -30,8 +30,10 @@ var Input = React.createClass({
   },
   render: function () {
     return (
-      <input type="text" ref="playerInput" className="input" onKeyDown={this.handleChange} autofocus>
-      </input>
+      <div>
+        <input type="text" ref="playerInput" className="input" onKeyDown={this.handleChange} autofocus>
+        </input>
+      </div>
     )
   }
 });

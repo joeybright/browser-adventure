@@ -4,6 +4,9 @@ var React = require('react')
 var Input = require('./Input.jsx')
 var Log = require('./Log.jsx')
 var Adventure = require('../Adventure.jsx')
+// styles
+var reset = require('../styles/reset.scss')
+var css = require('../styles/error.scss')
 
 var App = React.createClass({
   // Initial state is empty
@@ -23,8 +26,15 @@ var App = React.createClass({
   render: function () {
     return (
       <div className="adventure" onClick={this.focusInput}>
-        <Log data={this.state} />
-        <Input onAdd={this.updateAdventure} focus={this.state.focus} />
+        <div className="textAdventure">
+          <div className="textAdventureInnerShadow"></div>
+          <div className="textAdventureFadeOverlay"></div>
+          <div className="textAdventureBackgroundContainer"></div>
+          <div className="textAdventureContainer">
+            <Log data={this.state} />
+            <Input onAdd={this.updateAdventure} focus={this.state.focus} />
+          </div>
+        </div>
       </div>
     )
   }

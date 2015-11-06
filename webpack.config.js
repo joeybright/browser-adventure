@@ -11,6 +11,9 @@ module.exports = {
 
   module: {
     loaders: [
+      // { test: /\.css$/, loader: 'css-loader' },
+      // Finds .sass files and loads them
+      { test: /\.scss$/, loaders: ['style', 'css', 'sass'] },
       // Finds .jsx files and loads them using the jsx loader
       { test: /\.jsx$/, loader: 'jsx-loader' }
     ]
