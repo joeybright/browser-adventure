@@ -1,18 +1,22 @@
 
 // components/Input.jsx
 var React = require('react')
+var css = require('../styles/input.scss')
 
 var Input = React.createClass({
   // Add event to bubble up to parent
   propTypes: {
     onAdd: React.PropTypes.func.isRequired
   },
+  componentDidMount: function() {
+    return this.getDOMNode().focus();
+  },
   // Run when the component recieves new props
   componentWillReceiveProps: function(props) {
     // If focus is true
     if(props.focus) {
       // Get the DOM node of the component and focus it
-      this.getDOMNode().focus();
+      return this.getDOMNode().focus();
     }
   },
   handleChange: function(event) {
@@ -31,7 +35,8 @@ var Input = React.createClass({
   render: function () {
     return (
       <div>
-        <input type="text" ref="playerInput" className="input" onKeyDown={this.handleChange} autofocus>
+        <div className='carrot'></div>
+        <input autofocus type="text" ref="playerInput" className="adventure-input" onKeyDown={this.handleChange}>
         </input>
       </div>
     )

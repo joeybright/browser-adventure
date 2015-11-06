@@ -25,16 +25,9 @@ var App = React.createClass({
   },
   render: function () {
     return (
-      <div className="adventure" onClick={this.focusInput}>
-        <div className="textAdventure">
-          <div className="textAdventureInnerShadow"></div>
-          <div className="textAdventureFadeOverlay"></div>
-          <div className="textAdventureBackgroundContainer"></div>
-          <div className="textAdventureContainer">
-            <Log data={this.state} />
-            <Input onAdd={this.updateAdventure} focus={this.state.focus} />
-          </div>
-        </div>
+      <div className="text-adventure" onClick={this.focusInput}>
+        <Log data={this.state} />
+        <Input onAdd={this.updateAdventure} focus={this.state.focus} />
       </div>
     )
   }
