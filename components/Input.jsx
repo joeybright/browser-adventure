@@ -5,7 +5,15 @@ var React = require('react')
 var Input = React.createClass({
   // Add event to bubble up to parent
   propTypes: {
-    onAdd: React.PropTypes.func.isRequired,
+    onAdd: React.PropTypes.func.isRequired
+  },
+  // Run when the component recieves new props
+  componentWillReceiveProps: function(props) {
+    // If focus is true
+    if(props.focus) {
+      // Get the DOM node of the component and focus it
+      this.getDOMNode().focus();
+    }
   },
   handleChange: function(event) {
     // On enter button pressed
@@ -22,7 +30,7 @@ var Input = React.createClass({
   },
   render: function () {
     return (
-      <input type="text" ref="playerInput" className="input" onKeyDown={this.handleChange}>
+      <input type="text" ref="playerInput" className="input" onKeyDown={this.handleChange} autofocus>
       </input>
     )
   }

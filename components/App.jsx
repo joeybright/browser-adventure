@@ -16,11 +16,15 @@ var App = React.createClass({
     // The adventures state is set based on the object returned from updating the Adventure
     this.setState(newState);
   },
+  focusInput: function(event) {
+    // Focus the input on click of the app
+    this.setState({focus: true})
+  },
   render: function () {
     return (
-      <div className="adventure">
+      <div className="adventure" onClick={this.focusInput}>
         <Log data={this.state} />
-        <Input onAdd={this.updateAdventure} />
+        <Input onAdd={this.updateAdventure} focus={this.state.focus} />
       </div>
     )
   }
