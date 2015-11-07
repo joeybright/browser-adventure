@@ -6,7 +6,8 @@ var css = require('../styles/input.scss')
 var Input = React.createClass({
   // Add event to bubble up to parent
   propTypes: {
-    onAdd: React.PropTypes.func.isRequired
+    onAdd: React.PropTypes.func.isRequired,
+    focus: React.PropTypes.bool
   },
   componentDidMount: function() {
     return this.getDOMNode().focus();
