@@ -1,7 +1,7 @@
 
 // entry.jsx
 var React = require('react')
-var App = require ('./components/App.jsx')
+var App = require('./components/App.jsx')
 
 React.render(
   <App />,
