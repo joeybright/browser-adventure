@@ -11,7 +11,8 @@ var css = require('../styles/error.scss')
 var App = React.createClass({
   // Initial state is empty
   getInitialState: function() {
-    return Adventure.getLog();
+    // Starts the adventure!
+    return Adventure.startAdventure();
   },
   updateAdventure: function(string) {
     // Gets the new state by updating the adventure
