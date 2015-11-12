@@ -17,12 +17,15 @@ var mainAdventure = {
     {
       owner: 0,
       id: 0,
-      text: ["im here", "who are you?"],
-      characterRespondingID: 1,
-      expetedResponseLineIDs: [2, 3],
+      text: "im here",
       afterText: {
           goToLine: 5
       }
+    },
+    {
+      owner: 0,
+      id: 1,
+      text: "who are you?"
     },
     {
       owner: 1,
@@ -45,7 +48,17 @@ var mainAdventure = {
       characterRespondingID: 0,
       expectedResponseLineIDs: [0],
       afterText: {
-        goToline: 0
+        goToLine: 0
+      }
+    },
+    {
+      owner: 0,
+      id: 5,
+      text: ["Hello?"],
+      characterRespondingID: 0,
+      expectedResponseLineIDs: [0],
+      afterText: {
+        goToLine: 1
       }
     }
   ]
