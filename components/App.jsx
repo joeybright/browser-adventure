@@ -16,7 +16,7 @@ var App = React.createClass({
   },
   updateAdventure: function(string) {
     // Gets the new state by updating the adventure
-    var newState = Adventure.updateLog(string);
+    var newState = Adventure.addLineToLog(string);
     // The adventures state is set based on the object returned from updating the Adventure
     return this.setState(newState);
   },
