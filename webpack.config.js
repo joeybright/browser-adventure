@@ -5,7 +5,7 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: './webpack-build',
+    path: './',
     libraryTarget: 'umd'
   },
 
